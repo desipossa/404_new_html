@@ -1,55 +1,33 @@
+const MAIN_SLIDE = new Swiper('.main_visual_slide', {
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+});
 
-const BTN = document.querySelector('button');
-const H1 = document.querySelector('h1');
+const MAIN_SLIDE_LEFT_BUTTON = document.querySelector('.main_visual_slide .arrows .left');
+const MAIN_SLIDE_RIGHT_BUTTON = document.querySelector('.main_visual_slide .arrows .right');
 
-console.log(BTN);
+MAIN_SLIDE_LEFT_BUTTON.addEventListener('click', () => {
+    MAIN_SLIDE.slidePrev();
+});
+MAIN_SLIDE_RIGHT_BUTTON.addEventListener('click', () => {
+    MAIN_SLIDE.slideNext();
+});
 
-const Toggle = () => H1.classList.toggle('on');
-BTN.addEventListener('click', Toggle);
+const MAIN_SLIDE_DOTS = document.querySelectorAll('.main_visual_slide .dots li');
+console.log(MAIN_SLIDE_DOTS);
 
-const Lee_Name = '이창훈';
-const Lee_Age = 30;
-const Lee_Wife = '박양';
+// MAIN_SLIDE_DOTS[0].addEventListener('click', () => {
+//     console.log("번호")
+// });
 
-const Lee = {
-    name: '이창훈',
-    age: 30,
-    wife: '박양'
-}
-
-
-
-console.log(Lee.name, Lee['name']);
-
-const Ddal = ['이하린', '이은조'];
-
-console.log(Ddal[0]);
-
-
-const ShopData = [
-    { name: '이창훈', age: 30, id: 1 },
-    { name: '김창훈', age: 40, id: 2 },
-    { name: '박창훈', age: 50, id: 3 },
-    { name: '손창훈', age: 60, id: 4 },
-]
-
-const overAge = ShopData.filter(it => it.age > 49);
-
-console.log(overAge);
-
-const SHOP = document.querySelector('#N');
-//const SHOPDATE = ShopData.map(it => `<li>${it.name}</li>`).join('');
-
-//SHOP.innerHTML = SHOPDATE;
-
-for (let i = 0; i < overAge.length; i++) {
-    SHOP.innerHTML += `<li>${overAge[i].name}</li>`
-}
-
-
-
-
-
-
-
-
+MAIN_SLIDE_DOTS.forEach((it, idx) => {
+    it.addEventListener("click", () => {
+        // console.log("번호 : ", idx);
+        MAIN_SLIDE.slideTo(idx);
+        MAIN_SLIDE_DOTS.forEach(it => it.classList.remove('on'))
+        MAIN_SLIDE_DOTS[idx].classList.add('on');
+    })
+})

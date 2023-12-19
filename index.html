@@ -13,17 +13,43 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/custom.js" defer></script>
 </head>
 
 <body>
-    <h1>이거 없앰</h1>
-    <button>^^*</button>
-    <ul id="N">
+    <section class="main_visual">
+        <div class="swiper main_visual_slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide itm01">01</div>
+                <div class="swiper-slide itm02">02</div>
+                <div class="swiper-slide itm03">03</div>
+            </div>
 
-    </ul>
+            <div class="arrows">
+                <div class="left" role="button">
+                    <span class="material-symbols-outlined">
+                        arrow_back
+                    </span>
+                </div>
+                <div class="right" role="button">
+                    <span class="material-symbols-outlined">
+                        arrow_forward
+                    </span>
+                </div>
+            </div>
+
+            <ul class="dots">
+                <li role="button" class="on">01</li>
+                <li role="button">02</li>
+                <li role="button">03</li>
+            </ul>
+
+        </div>
+    </section>
 </body>
 
 </html>

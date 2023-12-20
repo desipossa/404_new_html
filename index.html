@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="다시만드는 기본 홈페이지">
-    <meta name="description" content="다시만드는 기본 홈페이지">
+    <meta name="title" content="독도전시관 따라 만들기">
+    <meta name="description" content="독도전시관 따라 만들기">
 
-    <title>다시만드는 기본 홈페이지</title>
+    <title>독도전시관 따라 만들기</title>
     <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="./css/reset.css">
@@ -21,66 +21,29 @@
 </head>
 
 <body>
-    <section class="main_visual">
-        <div class="swiper main_visual_slide">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide itm01">
-                    <div class="desc">
-                        <strong>01 Lorem ipsum dolor sit.</strong>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, iste?</p>
-                    </div>
-                </div>
-                <div class="swiper-slide itm02">
-                    <div class="desc">
-                        <strong>02 Lorem ipsum dolor sit.</strong>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, iste?</p>
-                    </div>
-                </div>
-                <div class="swiper-slide itm03">
-                    <div class="desc">
-                        <strong>03 Lorem ipsum dolor sit.</strong>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, iste?</p>
-                    </div>
-                </div>
-            </div>
+    <div class="Wrap">
+        <header id="Header" class="Header">
 
-            <div class="arrows">
-                <div class="left" role="button">
-                    <span class="material-symbols-outlined">
-                        arrow_back
-                    </span>
+        </header>
+        <main id="content" class="main">
+            <section class="MainVisual">
+                <h2 class="blind">main content</h2>
+                <div class="main_visual_slide swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide itm itm01">
+                            <div class="slide_img" data-swiper-parallax='45%'></div>
+                        </div>
+                        <div class="swiper-slide itm itm02">
+                            <div class="slide_img" data-swiper-parallax='45%'></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="right" role="button">
-                    <span class="material-symbols-outlined">
-                        arrow_forward
-                    </span>
-                </div>
-            </div>
+            </section>
+        </main>
+        <footer id="Footer" class="Footer">
 
-            <ul class="dots">
-                <li role="button">
-                    <div class="in">
-                        01 Lorem ipsum dolor sit.
-                    </div>
-                </li>
-                <li role="button">
-                    <div class="in">
-                        02 Lorem ipsum dolor sit.
-                    </div>
-                </li>
-                <li role="button">
-                    <div class="in">
-                        03 Lorem ipsum dolor sit.
-                    </div>
-                </li>
-            </ul>
-
-            <div class="num">
-                <strong>01</strong> / <span>03</span>
-            </div>
-
-        </div>
-    </section>
+        </footer>
+    </div>
 </body>
 
 </html>

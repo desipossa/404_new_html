@@ -1,6 +1,8 @@
 :root {
     --mc: #09847f;
     --sc: #b4613d;
+    --wc: #ffffff;
+    --gc: #f2f2f2;
 }
 
 html {
@@ -9,6 +11,57 @@ html {
 
 body {
     font-size: 1.6rem;
+}
+
+.default_btn {
+    display: inline-block;
+    padding: 2.4rem 3.2rem;
+    border: 3px solid var(--mc);
+    border-radius: 5rem;
+    color: var(--mc);
+    font-size: 1.8rem;
+}
+
+.default_btn_w {
+    position: relative;
+    display: inline-block;
+    padding: 2.4rem 3.2rem;
+    border: 3px solid var(--wc);
+    border-radius: 5rem;
+    color: var(--wc);
+    font-size: 1.8rem;
+    overflow: hidden;
+}
+
+.default_btn_w::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: var(--mc);
+    transition: height 0.3s;
+}
+
+.default_btn_w:hover::before {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+}
+
+.default_btn_w span {
+    position: relative;
+}
+
+
+
+.default_btn_w span::after {
+    content: "\f1e1";
+    font-family: 'Material Symbols Outlined';
+    margin: 0 0 0 10px;
+    display: inline-block;
+    transform: translate(0, 3px);
 }
 
 #Header {
@@ -41,7 +94,7 @@ body {
 #Header .gnb .depth1>li>a {
     display: block;
     font-size: 1.8rem;
-    color: #fff;
+    color: var(--wc);
     line-height: calc(12rem - 1px);
 }
 
@@ -55,7 +108,7 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
 
-    background: #fff;
+    background: var(--wc);
     padding: 1.8rem 2.4rem;
     border: 1px solid #ddd;
     border-radius: 1.6rem;
@@ -80,7 +133,7 @@ body {
 }
 
 #Header .gnb .depth1>li .depth2>li~li {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--gc);
 }
 
 #Header .util_member {
@@ -99,7 +152,7 @@ body {
     left: -2rem;
     width: 2px;
     height: 2px;
-    background: #fff;
+    background: var(--wc);
     transform: translate(-50%, -50%);
 
 
@@ -107,7 +160,7 @@ body {
 
 #Header .util_member a {
     font-size: 1.4rem;
-    color: #fff;
+    color: var(--wc);
 }
 
 
@@ -155,7 +208,57 @@ body {
 
 .MainVisual .main_visual_slide .itm .content p {
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-align: center;
-    line-height: 2.2rem;
+    line-height: 2.4rem;
+    margin: 0 0 3.2rem 0;
+    /* transform: translate(0, 100px);
+    opacity: 0; */
+}
+
+
+
+/* .MainVisual .main_visual_slide .itm.on p {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 0.5s 1s;
+} */
+
+.MainVisual .main_visual_slide .itm .content .btn_area {
+    text-align: center;
+}
+
+.MainVisual .main_slide_arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+
+    transform: translate(-50%, -50%);
+
+    max-width: 135.2rem;
+    width: 100%;
+    padding: 0 1.6rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    transition: max-width 0.5s;
+}
+
+.MainVisual:hover .main_slide_arrows {
+    max-width: 120rem;
+}
+
+.MainVisual .main_slide_arrows button {
+    background: transparent;
+    border: none;
+}
+
+.MainVisual .main_slide_arrows button span {
+    color: var(--wc);
+    font-size: 4rem;
+    padding: 1.8rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
 }

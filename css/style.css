@@ -3,6 +3,123 @@
     --sc: #b4613d;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+#Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#Header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12rem;
+}
+
+#Header h1 img {
+    height: 4rem;
+}
+
+#Header .gnb .depth1 {
+    display: flex;
+    gap: 4rem;
+
+    white-space: nowrap;
+}
+
+#Header .gnb .depth1>li>a {
+    display: block;
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: calc(12rem - 1px);
+}
+
+#Header .gnb .depth1>li {
+    position: relative;
+}
+
+#Header .gnb .depth1>li .depth2 {
+    position: absolute;
+    top: 12rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    background: #fff;
+    padding: 1.8rem 2.4rem;
+    border: 1px solid #ddd;
+    border-radius: 1.6rem;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+
+    min-width: 18rem;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.5s;
+}
+
+#Header .gnb .depth1>li:hover .depth2 {
+    top: 10rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+#Header .gnb .depth1>li .depth2 a {
+    display: block;
+    line-height: 4rem;
+}
+
+#Header .gnb .depth1>li .depth2>li~li {
+    border-top: 1px solid #ddd;
+}
+
+#Header .util_member {
+    display: flex;
+    gap: 4rem;
+}
+
+#Header .util_member>li {
+    position: relative;
+}
+
+#Header .util_member>li~li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -2rem;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    transform: translate(-50%, -50%);
+
+
+}
+
+#Header .util_member a {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+
+/* .MainVisual .main_visual_slide .swiper-wrapper {
+    transition-timing-function: cubic-bezier(.17, .67, .82, -0.16);
+} */
+
+
+.MainVisual .main_visual_slide {
+    border-radius: 0 0 10rem 0;
+    overflow: hidden;
+}
 
 .MainVisual .main_visual_slide .itm {
     position: relative;
@@ -22,4 +139,23 @@
 
 .MainVisual .main_visual_slide .itm02 .slide_img {
     background: url(../images/img_visual02.jpg) no-repeat left center/cover;
+}
+
+.MainVisual .main_visual_slide .itm .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.MainVisual .main_visual_slide .itm .content .img_area {
+    max-width: 40rem;
+    margin: 0 0 4rem 0;
+}
+
+.MainVisual .main_visual_slide .itm .content p {
+    color: #fff;
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 2.2rem;
 }

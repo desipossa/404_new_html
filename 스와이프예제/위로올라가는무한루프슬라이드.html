@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<body>
+
+    <style>
+        .slick-slide {
+            transition-delay: 300ms;
+        }
+
+        .loop_slick {
+            width: 400px;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .loop_slick img {
+            margin: 0 0 50px 0;
+        }
+    </style>
+
+    <div class="loop_slick">
+        <img src="./images/test01.jpg" alt="">
+        <img src="./images/test02.jpg" alt="">
+        <img src="./images/test03.jpg" alt="">
+        <img src="./images/test01.jpg" alt="">
+        <img src="./images/test02.jpg" alt="">
+        <img src="./images/test03.jpg" alt="">
+        <img src="./images/test01.jpg" alt="">
+        <img src="./images/test02.jpg" alt="">
+        <img src="./images/test03.jpg" alt="">
+    </div>
+
+
+    <script>
+        $(function () {
+
+            $('.loop_slick').slick({
+                autoplay: true,
+                autoplaySpeed: 0,
+                pauseOnHover: false,
+                slidesToShow: 2,
+                speed: 2000,
+                cssEase: "linear",
+                vertical: true,
+
+            });
+
+        })
+    </script>
+</body>
+
+</html>

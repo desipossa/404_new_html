@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .default {
+            padding: 100px 0;
+        }
+
+        .default:nth-of-type(even) {
+            background: #f9f9f9;
+        }
+
+        .default .inner {
+            width: 500px;
+            height: 500px;
+            background: tomato;
+            margin: 0 auto;
+        }
+
+        .default .inner .box {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border: 1px solid #333;
+        }
+
+        /* position */
+        .layout01 .inner {
+            position: relative;
+        }
+
+        .layout01 .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* table */
+        .layout02 .inner {
+            display: table;
+        }
+
+        .layout02 .case {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .layout02 .box {
+            margin: 0 auto;
+        }
+
+        /* flex */
+
+        .layout03 .inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* grid 1*/
+        .layout04 .inner {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* grid 2*/
+        .layout05 .inner {
+            display: grid;
+            place-items: center;
+        }
+
+        /* inline block */
+        .layout06 .inner {
+            text-align: center;
+        }
+
+        .layout06 .inner::before {
+            content: "";
+            display: inline-block;
+            height: 500px;
+            width: 0;
+            vertical-align: middle;
+        }
+
+        .layout06 .box {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- position -->
+    <section class="default layout01">
+        <div class="inner">
+            <div class="box">position</div>
+        </div>
+    </section>
+
+    <!-- table -->
+    <section class="default layout02">
+        <div class="inner">
+            <div class="case">
+                <div class="box">table</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- flex -->
+    <section class="default layout03">
+        <div class="inner">
+            <div class="box">flex</div>
+        </div>
+    </section>
+
+    <!-- grid 1 -->
+    <section class="default layout04">
+        <div class="inner">
+            <div class="box">grid1</div>
+        </div>
+    </section>
+
+    <!-- grid 2 -->
+    <section class="default layout05">
+        <div class="inner">
+            <div class="box">grid2</div>
+        </div>
+    </section>
+
+    <!-- inline block -->
+    <section class="default layout06">
+        <div class="inner">
+            <div class="box">grid2</div>
+        </div>
+    </section>
+</body>
+
+</html>

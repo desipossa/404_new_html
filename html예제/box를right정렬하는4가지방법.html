@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .default {
+            padding: 100px 0;
+        }
+
+        .default:nth-of-type(even) {
+            background: #f9f9f9;
+        }
+
+        .default .inner {
+            width: 500px;
+            background: tomato;
+            margin: 0 auto;
+        }
+
+        .default .inner .box {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border: 1px solid #333;
+        }
+
+        /* position */
+        .layout01 .inner {
+            position: relative;
+            height: 100px;
+        }
+
+        .layout01 .box {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .layout01 .box:nth-child(2) {
+            right: 100px;
+        }
+
+
+        /* flex */
+
+        .layout03 .inner {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* grid 1*/
+        .layout04 .inner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(0, 100px));
+            justify-content: flex-end;
+        }
+
+
+        /* inline block */
+
+        .layout06 .inner {
+            text-align: right;
+            font-size: 0;
+        }
+
+        .layout06 .box {
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- position -->
+    <section class="default layout01">
+        <div class="inner">
+            <div class="box">position</div>
+            <div class="box">position</div>
+        </div>
+    </section>
+
+    <!-- flex -->
+    <section class="default layout03">
+        <div class="inner">
+            <div class="box">flex</div>
+            <div class="box">flex</div>
+        </div>
+    </section>
+
+    <!-- grid 1 -->
+    <section class="default layout04">
+        <div class="inner">
+            <div class="box">grid1</div>
+            <div class="box">grid1</div>
+        </div>
+    </section>
+
+
+
+    <!-- inline block -->
+    <section class="default layout06">
+        <div class="inner">
+            <div class="box">inline block</div>
+            <div class="box">inline block</div>
+        </div>
+    </section>
+</body>
+
+</html>

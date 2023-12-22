@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .history {
+            padding: 100px 0;
+        }
+
+        .history .inner,
+        .history h2 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        table {
+            width: 100%;
+            /* 표의 셀사이를 붙여주셈. */
+            border-collapse: collapse;
+
+        }
+
+        .default_table {
+            border-top: 2px solid tomato;
+        }
+
+        .default_table caption {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            margin: -1px;
+        }
+
+        .default_table td,
+        .default_table th {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        .default_table td {
+            border-left: 1px solid #ddd;
+        }
+
+        .default_table tfoot td {
+            border-left: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- https://www.codingfactory.net/10510 -->
+    <section class="history">
+        <h2>HISTORY</h2>
+        <div class="inner">
+            <figure>
+                <table class="default_table">
+                    <colgroup>
+                        <col style="width:150px" />
+                        <col />
+                    </colgroup>
+                    <caption>연혁입니다.</caption>
+                    <thead>
+                        <tr>
+                            <th>년도</th>
+                            <td>연혁</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>2023</th>
+                            <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, sequi.</td>
+                        </tr>
+                        <tr>
+                            <th>2021</th>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, perspiciatis.Lorem
+                                ipsum, dolor sit amet consectetur adipisicing elit. Iusto, sequi.</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">2021</th>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, perspiciatis.Lorem
+                                ipsum, dolor sit amet consectetur adipisicing elit. Iusto, sequi.</td>
+                        </tr>
+                        <tr>
+                            <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, perspiciatis.Lorem
+                                ipsum, dolor sit amet consectetur adipisicing elit. Iusto, sequi.</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">합 계 : 그는 참 좋은 사람이었습니다. </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </figure>
+        </div>
+    </section>
+</body>
+
+</html>

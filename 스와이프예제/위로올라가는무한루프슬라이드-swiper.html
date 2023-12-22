@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .slick-slide {
+            transition-delay: 300ms;
+        }
+
+        .swiper {
+            width: 400px;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .loop_slick img {
+            margin: 0 0 50px 0;
+        }
+
+        .swiper-wrapper {
+            transition-timing-function: linear !important;
+        }
+    </style>
+    <!-- https://ranidiant.tistory.com/entry/swiper-js-%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%B6%80%EB%93%9C%EB%9F%BD%EA%B2%8C-%ED%9D%90%EB%A5%B4%EB%8A%94-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-%EB%A7%8C%EB%93%A4%EA%B8%B0 -->
+</head>
+
+<body>
+
+
+
+
+    <div class="loop-swiper swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/test01.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/test02.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/test03.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/test01.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/test02.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/test03.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/test01.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/test02.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/test03.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/test01.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/test02.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/test03.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".loop-swiper", {
+            direction: "vertical",
+            slidesPerView: 2,
+            //spaceBetween: 30,
+            loop: true,
+            speed: 2000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>

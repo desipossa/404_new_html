@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            height: 200vh;
+            background: tomato;
+        }
+
+        .m {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            z-index: 999;
+            background: #333;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main"></section>
+    <div class="m"></div>
+    <script>
+        const M = document.querySelector('.m');
+        const MW = M.clientWidth;
+        const MH = M.clientHeight;
+
+        const W = window;
+
+        let x = 0, y = 0;
+        let sx = 0, sy = 0;
+        const speed = 0.3;
+
+        //부드러운 모션 만들기 - 가속도 만들기
+
+        function smooth() {
+            sx += (x - sx) * speed;
+            sy += (y - sy) * speed;
+            W.requestAnimationFrame(smooth);
+        }
+
+        // 마우스무브 이벤트의 생성
+        function mouseMove(e) {
+            //중심 좌표를 0,0으로 만들어서 transform으로 움직이기
+            x = e.clientX - W.innerWidth / 2;
+            y = e.clientY - W.innerHeight / 2;
+
+            //움직이기
+            M.style.transform = `translate(${sx - MW / 2}px,${sy - MH / 2}px)`;
+        }
+
+
+        // clientX, offsetX, pageX, screenX의 차이
+        // https://megaton111.cafe24.com/2016/11/29/clientx-offsetx-pagex-screenx%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90/
+
+        smooth();
+        W.addEventListener('mousemove', mouseMove);
+
+
+    </script>
+</body>
+
+</html>

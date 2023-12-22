@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .history {
+            padding: 100px 0;
+        }
+
+        .history h2 {
+            max-width: 1200px;
+            margin: 0 auto 50px auto;
+        }
+
+        .history .inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+
+
+        .history .inner li {
+            position: relative;
+            padding: 0 0 0 20px;
+        }
+
+        .history .inner li:not(:last-child) {
+            padding: 0 0 40px 20px;
+        }
+
+        .history .inner li::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border: 3px solid #333;
+            border-radius: 50%;
+        }
+
+        .history .inner li::after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            bottom: 20px;
+            left: 4px;
+            width: 2px;
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="history">
+        <h2>HISTORY</h2>
+        <div class="inner">
+            <ul>
+                <li>
+                    <strong>2023</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, animi?</p>
+                </li>
+                <li>
+                    <strong>2010</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, animi? lorem1000 Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Voluptatibus aut cumque nesciunt necessitatibus
+                        reprehenderit, quae deleniti nisi itaque perspiciatis exercitationem.</p>
+                </li>
+                <li>
+                    <strong>2002</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, animi?</p>
+                </li>
+                <li>
+                    <strong>1998</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo, animi?</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>

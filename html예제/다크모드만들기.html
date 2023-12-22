@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #fff;
+            color: #333;
+        }
+
+        body.on {
+            background: #333;
+            color: #fff;
+        }
+
+        /* @media (prefers-color-scheme: light) {
+            .D {
+                display: none;
+            }
+        } */
+    </style>
+</head>
+
+<body class="on">
+    <h1>hi <span>WHITE</span></h1>
+    <div class="W">WHITE</div>
+    <div class="D">DARK</div>
+    <button id="B">on</button>
+    <script>
+        const bon = window.matchMedia("(prefers-color-scheme:dark)");
+        //const boff = window.matchMedia("(prefers-color-scheme: dark)");
+
+        let dark = true;
+        B.onclick = function (e) {
+            e.matches
+                ? document.body.classList.add("on")
+                : document.body.classList.remove("on");
+
+            e.matches = !e.matches
+
+            console.log(dark, bon)
+
+        }
+    </script>
+</body>
+
+</html>

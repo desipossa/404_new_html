@@ -9,7 +9,7 @@
 }
 
 * {
-    outline: 1px solid tomato;
+    outline: 1px solid tomato--;
 }
 
 html {
@@ -632,19 +632,20 @@ body {
 
 #Footer {
     position: relative;
-    min-height: 100vh;
     border-radius: 10rem 0 0 0;
+    background: #3a3846;
+    overflow: hidden;
 
-    background: #3a3846 url(../images/bg_banner.jpg) no-repeat center top;
+    padding: 0 0 10rem 0;
 }
 
 
 
 #Footer .txt_area {
-    position: absolute;
-    top: 20rem;
-    left: 50%;
-    transform: translate(-50%, 0);
+    text-align: center;
+    height: 68rem;
+    padding: 20rem 0 0 0;
+    background: #3a3846 url(../images/bg_banner.jpg) no-repeat center top;
 }
 
 #Footer .txt_area .img_box {
@@ -658,8 +659,10 @@ body {
 
 #Footer .txt_area p {
     position: relative;
+    display: inline-block;
     font-family: 'Noto Serif KR', serif;
     font-size: 3.2rem;
+    line-height: 4rem;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.5);
     white-space: nowrap;
@@ -751,4 +754,34 @@ body {
         transform: translate(-50%, 0) scale(10);
         opacity: 0.1;
     }
+}
+
+#Footer .bottom .lnk {
+    color: var(--dc);
+    margin: 0 0 2.4rem 0;
+}
+
+#Footer .bottom .lnk>li {
+    display: inline-block;
+}
+
+#Footer .bottom .lnk>li~li::before {
+    content: "";
+    display: inline-block;
+    margin: 0 8px;
+    width: 3px;
+    height: 3px;
+    background: var(--dc);
+    vertical-align: 4px;
+    border-radius: 50%;
+}
+
+#Footer .bottom .info {
+    color: var(--dc);
+    margin: 0 0 2.4rem 0;
+}
+
+#Footer .bottom .info>li {
+    display: inline-block;
+    margin: 0 8px 0 0;
 }

@@ -573,3 +573,61 @@ body {
     border-radius: 50%;
     margin: 0 1rem 0 0;
 }
+
+.MainGuide {
+    position: relative;
+    z-index: 999;
+    margin: 0 0 -10rem 0;
+}
+
+.MainGuide .content {
+    display: flex;
+    gap: 10rem;
+    background: var(--mc);
+    border-radius: 5rem;
+}
+
+.MainGuide .content>* {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 6rem 8rem;
+}
+
+.MainGuide .content>*~*::after {
+    content: "";
+    position: absolute;
+    top: 3rem;
+    bottom: 3rem;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.25);
+    left: -5rem;
+}
+
+.MainGuide .content .tit {
+    flex: 1 1 auto;
+}
+
+.MainGuide .content .tit h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin: 0 0 1.8rem 0;
+    color: var(--wc);
+}
+
+.MainGuide .content .tit p {
+    line-height: 2rem;
+    color: var(--wc);
+}
+
+.MainGuide .content .img_box {
+    flex: 0 0 12rem;
+}
+
+#Footer {
+    background: #333;
+    height: 50vh;
+    border-radius: 10rem 0 0 0;
+}

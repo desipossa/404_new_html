@@ -627,7 +627,32 @@ body {
 }
 
 #Footer {
+    position: relative;
     background: #333;
-    height: 50vh;
+    min-height: 100vh;
     border-radius: 10rem 0 0 0;
+}
+
+#Footer .txt_area {
+    position: absolute;
+    top: 20rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#Footer .txt_area .img_box {
+    text-align: center;
+    margin: 0 0 3.2rem 0;
+}
+
+#Footer .txt_area .img_box img {
+    width: 20rem;
+}
+
+#Footer .txt_area p {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--wc);
+    white-space: nowrap;
 }

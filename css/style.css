@@ -8,6 +8,10 @@
     --bc: #333333;
 }
 
+* {
+    outline: 1px solid tomato;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -628,10 +632,13 @@ body {
 
 #Footer {
     position: relative;
-    background: #333;
     min-height: 100vh;
     border-radius: 10rem 0 0 0;
+
+    background: #3a3846 url(../images/bg_banner.jpg) no-repeat center top;
 }
+
+
 
 #Footer .txt_area {
     position: absolute;
@@ -650,9 +657,98 @@ body {
 }
 
 #Footer .txt_area p {
+    position: relative;
     font-family: 'Noto Serif KR', serif;
     font-size: 3.2rem;
-    font-weight: 700;
-    color: var(--wc);
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
     white-space: nowrap;
+}
+
+#Footer .txt_area p::after {
+    content: "“ 경상북도 울릉읍 독도리 1-96 ”";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--wc);
+    width: 0;
+    overflow: hidden;
+    border-right: 1px solid #fff;
+    animation: txt_ani 6s infinite;
+    animation-timing-function: steps(20, end);
+}
+
+@keyframes txt_ani {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 105%;
+    }
+}
+
+#Footer .dots {
+    position: absolute;
+    top: 40rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 32rem;
+    width: 100%;
+    z-index: 999;
+    color: #fff;
+}
+
+
+
+#Footer .dots>* {
+    position: absolute;
+    white-space: nowrap;
+}
+
+#Footer .dots .west {
+    top: -1.3rem;
+    left: -50.67%;
+}
+
+#Footer .dots .east {
+    top: 9.2rem;
+    right: -17.02%;
+}
+
+#Footer .dots .dot::before {
+    content: "";
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 4px;
+    height: 4px;
+    background: var(--wc);
+    border-radius: 50%;
+}
+
+#Footer .dots .dot::after {
+    content: "";
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 4px;
+    height: 4px;
+    background: var(--wc);
+    border-radius: 50%;
+    animation: dot 1s infinite;
+}
+
+@keyframes dot {
+    0% {
+        transform: translate(-50%, 0) scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(-50%, 0) scale(10);
+        opacity: 0.1;
+    }
 }

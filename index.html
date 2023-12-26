@@ -13,10 +13,13 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/custom.js" defer></script>
 </head>
 <!-- 위로 올라간는 무한 루프 애니메이션, 가로로 흐르는 text 슬라이드 만들어보기 -->
@@ -28,7 +31,7 @@
             <div class="inner">
                 <h1>
                     <a href="/">
-                        <img src="./images/logo_simbol.svg" alt=""><img src="./images/logo_tx.svg" alt="">
+                        <img src="./images/logo_simbol.svg" alt=""><img src="./images/logo_tx.svg" alt="" class="txt">
                     </a>
                 </h1>
                 <nav class="gnb">
@@ -80,6 +83,13 @@
         <main id="content" class="main">
             <section class="MainVisual">
                 <h2 class="blind">main content</h2>
+                <a href="" class="submit">
+                    <div class="icon">
+                        <span><img src="./images/icon_apply.svg" alt=""></span>
+                        단체예약<br />
+                        신청
+                    </div>
+                </a>
                 <div class="main_visual_slide swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide itm itm01">
@@ -137,7 +147,7 @@
             <section class="MainInfo default">
                 <h2 class="blind">main Info</h2>
                 <div class="inner">
-                    <div class="left">
+                    <div class="left" data-aos="fade-up">
                         <h3>독도 바로알기</h3>
                         <p>독도의 역사를 배우고, 자연을 체험하며 독도영토주권<br />
                             수호 의지를 다질 수 있는 소중한 시간이 되기를 바랍니다.</p>
@@ -147,7 +157,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="right">
+                    <div class="right" data-aos="fade-up" data-aos-delay="500">
                         <h3>관람안내</h3>
                         <div class="tit_area">
                             <span class="material-symbols-outlined">
@@ -181,7 +191,7 @@
                     </div>
                 </div>
             </section>
-            <section class="MainCustomer default">
+            <section class="MainCustomer default" data-aos="fade-up">
                 <div class="inner">
                     <div class="tit_area">
                         <h2>공지사항</h2>
@@ -249,7 +259,7 @@
                     </div>
                 </div>
             </section>
-            <section class="MainGuide">
+            <section class="MainGuide" data-aos="fade-up">
                 <h2 class="blind">체험관안내</h2>
                 <div class="inner">
                     <div class="content">
@@ -301,7 +311,7 @@
                     <address>
                         <ul class="lnk">
                             <li><a href="">이용약관</a></li>
-                            <li><a href="">개인정보취급방침</a></li>
+                            <li><a href=""><strong>개인정보취급방침</strong></a></li>
                             <li><a href="">이메일주소무단수집거부</a></li>
                         </ul>
                         <ul class="info">

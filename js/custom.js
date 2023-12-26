@@ -35,3 +35,13 @@ MAIN_NS_RIGHT_BUTTON.addEventListener('click', () => {
 });
 
 
+window.addEventListener('scroll', () => {
+    let SCT = window.scrollY;
+    SCT > 0
+        ? document.querySelector('#Header').classList.add('on')
+        : document.querySelector('#Header').classList.remove('on');
+});
+
+AOS.init();
+
+

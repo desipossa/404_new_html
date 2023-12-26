@@ -134,11 +134,25 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+#Header.on {
+    background: var(--wc);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#Header.on .txt {
+    filter: invert();
+}
+
 #Header .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 12rem;
+    transition: 0.5s;
+}
+
+#Header.on .inner {
+    height: 8rem;
 }
 
 #Header h1 img {
@@ -157,6 +171,10 @@ body {
     font-size: 1.8rem;
     color: var(--wc);
     line-height: calc(12rem - 1px);
+}
+
+#Header.on .gnb .depth1>li>a {
+    color: var(--bc);
 }
 
 #Header .gnb .depth1>li {
@@ -186,6 +204,10 @@ body {
     top: 10rem;
     opacity: 1;
     visibility: visible;
+}
+
+#Header.on .gnb .depth1>li:hover .depth2 {
+    top: 9rem;
 }
 
 #Header .gnb .depth1>li .depth2 a {
@@ -219,9 +241,17 @@ body {
 
 }
 
+#Header.on .util_member>li~li::after {
+    background: var(--bc);
+}
+
 #Header .util_member a {
     font-size: 1.4rem;
     color: var(--wc);
+}
+
+#Header.on .util_member a {
+    color: var(--bc);
 }
 
 
@@ -234,6 +264,44 @@ body {
     position: relative;
 }
 
+.MainVisual .submit {
+    position: absolute;
+    bottom: -8rem;
+    right: 10rem;
+    z-index: 999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 16rem;
+    height: 16rem;
+
+    background: var(--mc);
+    color: var(--wc);
+
+    font-size: 1.8rem;
+    text-align: center;
+
+    line-height: 2rem;
+    border-radius: 50%;
+
+}
+
+.MainVisual .submit:hover {
+    animation: rubberBand 2s infinite;
+}
+
+.MainVisual .submit span {
+    display: block;
+    margin: 0 0 1.6rem 0;
+    line-height: 1;
+}
+
+.MainVisual .submit img {
+    width: 3rem;
+}
+
 
 .MainVisual .main_visual_slide {
     border-radius: 0 0 10rem 0;
@@ -244,6 +312,7 @@ body {
     position: relative;
     overflow: hidden;
     height: 100vh;
+    min-height: 70rem;
 }
 
 .MainVisual .main_visual_slide .itm .slide_img {
@@ -481,6 +550,7 @@ body {
     display: flex;
     max-width: calc((100% - 1352px)/2 + 1352px);
     margin: 0 0 0 auto;
+    padding: 0 0 0 1.6rem;
 }
 
 .MainCustomer .inner .tit_area {
@@ -758,7 +828,11 @@ body {
 
 #Footer .bottom .lnk {
     color: var(--dc);
-    margin: 0 0 2.4rem 0;
+    margin: 0 0 1.8rem 0;
+}
+
+#Footer .bottom .lnk strong {
+    font-weight: 700;
 }
 
 #Footer .bottom .lnk>li {
@@ -768,7 +842,7 @@ body {
 #Footer .bottom .lnk>li~li::before {
     content: "";
     display: inline-block;
-    margin: 0 8px;
+    margin: 0 8px 0 4px;
     width: 3px;
     height: 3px;
     background: var(--dc);
@@ -784,4 +858,9 @@ body {
 #Footer .bottom .info>li {
     display: inline-block;
     margin: 0 8px 0 0;
+}
+
+#Footer .bottom .copy {
+    font-size: 1.4rem;
+    color: var(--dc);
 }
